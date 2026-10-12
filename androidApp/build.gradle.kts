@@ -1,49 +1,27 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.compose.multiplatform)
-    alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.convention.android.application.compose)
     alias(libs.plugins.compose.hot.reload)
 }
 dependencies {
     implementation(project(":shared"))
+
+    implementation(projects.core.data)
+    implementation(projects.core.domain)
+    implementation(projects.core.designsystem)
+    implementation(projects.core.presentation)
+
+
+    implementation(projects.feature.auth.domain)
+    implementation(projects.feature.auth.presentation)
+
+    implementation(projects.feature.chat.data)
+    implementation(projects.feature.chat.database)
+    implementation(projects.feature.chat.domain)
+    implementation(projects.feature.chat.persentaion)
 
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.androidx.compose.ui.tooling.preview)
     debugImplementation(libs.androidx.compose.ui.tooling)
-}
-
-android {
-    namespace = "com.roba.chirp"
-    compileSdk = libs.versions.projectCompileSdkVersion.get().toInt()
-
-    defaultConfig {
-        applicationId = "com.roba.chirp"
-        minSdk = libs.versions.projectMinSdkVersion.get().toInt()
-        targetSdk = libs.versions.projectTargetSdkVersion.get().toInt()
-        versionCode = 1
-        versionName = "1.0"
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    buildFeatures {
-        compose = true
-    }
 }
