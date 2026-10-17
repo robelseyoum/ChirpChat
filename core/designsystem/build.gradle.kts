@@ -12,6 +12,8 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(libs.kotlin.stdlib)
+                implementation(libs.compose.components.resources)
+                implementation(libs.compose.uiToolingPreview)
                 // Add KMP dependencies here
             }
         }

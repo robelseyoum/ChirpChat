@@ -48,6 +48,7 @@ coil = "3.6.3"
 coil-network = "3.6.3"
 moko = "0.20.1"
 buildkonfig = "0.23.0"
+kermit = "2.2.0"
 
 projectApplicationId = "com.roba.chirp"
 projectVersionName = "1.0"
@@ -140,6 +141,9 @@ firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil-network" }
 
+# Loggin
+touchlab-kermit = { module = "co.touchlab:kermit", version.ref = "kermit"}
+
 #Permission handling
 moko-permissions = { module = "dev.icerock.moko:permissions", version.ref = "moko" }
 moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko" }
@@ -222,5 +226,6 @@ ktor-common = [
     "ktor-client-core",
     "ktor-client-content-negotiation",
     "ktor-serialization-kotlinx-json",
-    "ktor-client-auth"
+    "ktor-client-auth",
+    "ktor-client-logging"
 ]

@@ -15,14 +15,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.jetbrains.compose.resources.painterResource
-
 import chirp.shared.generated.resources.Res
 import chirp.shared.generated.resources.compose_multiplatform
+import com.roba.core.designsystem.theme.ChirpTheme
+import com.roba.core.designsystem.theme.extended
 
 @Composable
 @Preview
 fun App() {
-    MaterialTheme {
+    ChirpTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
             modifier = Modifier
