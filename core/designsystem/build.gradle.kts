@@ -12,8 +12,11 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(libs.kotlin.stdlib)
+                // ColumnScope is part of ChirpAdaptiveFormLayout's public API.
+                api(libs.jetbrains.compose.foundation)
                 implementation(libs.compose.components.resources)
                 implementation(libs.compose.uiToolingPreview)
+                implementation(projects.core.presentation)
                 // Add KMP dependencies here
             }
         }

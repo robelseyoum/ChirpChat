@@ -24,32 +24,14 @@ enum class DeviceConfiguration {
     DESKTOP;
 
     companion object {
-
-        /**
-         * when {
-         *     minWidthDp < 600 &&
-         *         minHeightDp >= 480 -> MOBILE_PORTRAIT
-         *
-         *     minWidthDp < 840 &&
-         *         minHeightDp >= 480 -> MOBILE_LANDSCAPE
-         *
-         *     minWidthDp in 600..840 &&
-         *         minHeightDp >= 900 -> TABLET_PORTRAIT
-         *
-         *     minWidthDp >= 840 &&
-         *         minHeightDp in 480..900 -> TABLET_LANDSCAPE
-         *
-         *     else -> DESKTOP
-         * }
-         */
         fun fromWindowSizeClass(windowSizeClass: WindowSizeClass): DeviceConfiguration {
             return with(windowSizeClass) {
                 when {
                     minWidthDp < WIDTH_DP_MEDIUM_LOWER_BOUND &&
                             minHeightDp >= HEIGHT_DP_MEDIUM_LOWER_BOUND -> MOBILE_PORTRAIT
 
-                    minWidthDp < WIDTH_DP_EXPANDED_LOWER_BOUND &&
-                            minHeightDp >= HEIGHT_DP_MEDIUM_LOWER_BOUND -> MOBILE_LANDSCAPE
+                    minWidthDp >= WIDTH_DP_EXPANDED_LOWER_BOUND &&
+                            minHeightDp < HEIGHT_DP_MEDIUM_LOWER_BOUND -> MOBILE_LANDSCAPE
 
                     minWidthDp in WIDTH_DP_MEDIUM_LOWER_BOUND..WIDTH_DP_EXPANDED_LOWER_BOUND &&
                             minHeightDp >= HEIGHT_DP_EXPANDED_LOWER_BOUND -> TABLET_PORTRAIT
