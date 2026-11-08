@@ -15,6 +15,7 @@ kotlin {
                 implementation(libs.compose.components.resources)
                 implementation(libs.material3.adaptive)
                 implementation(projects.core.domain)
+                implementation(libs.bundles.koin.common)
             }
         }
 

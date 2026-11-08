@@ -33,8 +33,8 @@ fun ChirpIconButton(
             color = MaterialTheme.colorScheme.outline
         ),
         colors = IconButtonDefaults.outlinedIconButtonColors(
-            contentColor = MaterialTheme.colorScheme.surface,
-            containerColor = MaterialTheme.colorScheme.extended.textSecondary
+            contentColor = MaterialTheme.colorScheme.extended.textSecondary,
+            containerColor = MaterialTheme.colorScheme.surface
         )
     ) {
         content()

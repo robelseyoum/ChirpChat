@@ -31,7 +31,7 @@ fun ChirpTextField(
     singleLine: Boolean = false,
     enabled: Boolean = true,
     keyboardType: KeyboardType = KeyboardType.Text,
-    onFocusChange: (Boolean) -> Unit = {}
+    onFocusChanged: (Boolean) -> Unit = {}
 ) {
 
     ChirpTextFieldLayout(
@@ -40,7 +40,7 @@ fun ChirpTextField(
         isError = isError,
         supportingText = supportingText,
         enabled = enabled,
-        onFocusChanged = onFocusChange
+        onFocusChanged = onFocusChanged
     ) { styleModifier, interactionSource ->
         BasicTextField(
             state = state,

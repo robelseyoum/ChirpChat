@@ -17,6 +17,7 @@ material-icons = "1.7.3"
 # Maintain compose multiplatform version aligned with navigation, cache error could happen
 compose-lifecycle = "2.11.0"
 navigation-compose = "2.9.2"
+navigation-event = "1.1.0"
 jetbrains-core-bundle = "1.0.1"
 
 # AndroidX
@@ -93,6 +94,7 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 # Compose
 jetbrains-compose-backhandler = { module = "org.jetbrains.compose.ui:ui-backhandler", version.ref = "compose-multiplatform" }
 jetbrains-compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation-compose" }
+jetbrains-navigationevent-compose = { module = "org.jetbrains.androidx.navigationevent:navigationevent-compose", version.ref = "navigation-event" }
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3" }

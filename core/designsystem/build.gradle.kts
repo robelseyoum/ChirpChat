@@ -18,6 +18,9 @@ kotlin {
                 implementation(libs.compose.uiToolingPreview)
                 implementation(projects.core.presentation)
                 // Add KMP dependencies here
+
+                implementation(libs.coil.compose)
+                implementation(libs.coil.network.ktor)
             }
         }
 
@@ -40,4 +43,8 @@ kotlin {
         }
     }
 
+}
+
+compose.resources {
+    publicResClass = true
 }
