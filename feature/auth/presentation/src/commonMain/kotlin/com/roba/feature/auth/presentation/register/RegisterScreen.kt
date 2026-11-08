@@ -85,7 +85,7 @@ fun RegisterScreen(
                 supportingText = state.usernameError?.asString()
                     ?: stringResource(Res.string.username_hint),
                 isError = state.usernameError != null,
-                onFocusChange = { isFocused ->
+                onFocusChanged = { isFocused ->
                     onAction(RegisterAction.OnInputTextFocusGain)
                 }
             )
@@ -97,7 +97,7 @@ fun RegisterScreen(
                 supportingText = state.emailError?.asString()
                     ?: stringResource(Res.string.username_hint),
                 isError = state.emailError != null,
-                onFocusChange = { isFocused ->
+                onFocusChanged = { isFocused ->
                     onAction(RegisterAction.OnInputTextFocusGain)
                 }
             )

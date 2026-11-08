@@ -15,6 +15,7 @@ kotlin {
             implementation(projects.core.designsystem)
             implementation(projects.core.presentation)
             implementation(projects.feature.auth.presentation)
+            implementation(projects.feature.chat.data)
             implementation(projects.feature.chat.persentaion)
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
